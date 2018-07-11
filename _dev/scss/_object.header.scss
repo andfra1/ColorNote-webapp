@@ -1,0 +1,6 @@
+.header {
+@include fixed;
+&-spacer {
+  position: relative;
+  height: 32px;
+}}

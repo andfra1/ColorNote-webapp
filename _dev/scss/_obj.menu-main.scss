@@ -1,0 +1,23 @@
+.menu {
+  display: none;
+  &-main {
+    &__profile {
+      display: flex;
+      &__avatar {
+        position: relative;
+        width: 64px;
+        height: 64px;
+        overflow: hidden;
+        &>img {
+          @include absCenter;
+        }
+      }
+      &__name {
+        flex: 1 0 auto;
+      }
+      &__sync {
+
+      }
+    }
+  }
+}
