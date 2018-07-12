@@ -51,7 +51,12 @@ $icon-files-empty:"\e925";
 $icon-clock2:"\e94e";
 $icon-box-remove:"\e95f";
 $icon-ungroup:"\ea59";
-$icon-scissors:"\ea5a";
+$icon-scissors:"\ea5a"; 
+$icon-check-square2:"\e915";
+$icon-square:"\e916";
+$icon-checkbox-checked:"\ea52";
+$icon-checkbox-unchecked:"\ea53";
+
 
 
 .icon-bars:before {
@@ -117,6 +122,12 @@ $icon-scissors:"\ea5a";
 .icon-trash:before {
   content: "\e914";
 }
+.icon-check-square2:before {
+  content: "\e915";
+}
+.icon-square:before {
+  content: "\e916";
+}
 .icon-file-text:before {
   content: "\e922";
 }
@@ -129,9 +140,12 @@ $icon-scissors:"\ea5a";
 .icon-box-remove:before {
   content: "\e95f";
 }
+.icon-checkbox-checked:before {
+  content: "\ea52";
+}
+.icon-checkbox-unchecked:before {
+  content: "\ea53";
+}
 .icon-ungroup:before {
   content: "\ea59";
-}
-.icon-scissors:before {
-  content: "\ea5a";
 }

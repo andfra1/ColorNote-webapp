@@ -1,4 +1,4 @@
-.notes{
+.notes {
   position: relative;
   &__item {
     position: relative;
@@ -6,6 +6,7 @@
     display: flex;
     padding: 3px 7px;
     margin: 5px;
+    margin-right: 36px;
     align-items: center;
     &:before {
       content: '';
@@ -17,18 +18,30 @@
       height: 100%;
       background-color: rgba(255, 255, 0, 1);
     }
+    &__check {
+      display: block;
+      position: absolute;
+      left: 100%;
+      padding: 6px 7px;
+      &:before {
+        @include iconize;
+        content: $icon-checkbox-unchecked;
+      }
+    }
     &__title {
       flex: 1 0 auto;
     }
-    &__checklist {
+    &__status {
       display: none;
-      @include iconize;
       margin: 0 5px;
       &::before {
-        content: $icon-check;
+        @include iconize;
       }
-      &--isChecklist {
+      &--checklist {
         display: block;
+        &::before {
+          content: $icon-check;
+        }
       }
     }
     &__date {
@@ -39,6 +52,13 @@
       justify-content: flex-start;
       width: 50px;
       height: 30px;
+    }
+  }
+  [type="checkbox"]:checked+*>.notes__item__check {
+    &:before {
+      content: $icon-checkbox-checked;
+      font-size: 1rem;
+      line-height: 1rem;
     }
   }
   [type="checkbox"]:checked+.notes__item {

@@ -491,6 +491,16 @@ svg
     content: '\e914';
 }
 
+.icon-check-square2:before
+{
+    content: '\e915';
+}
+
+.icon-square:before
+{
+    content: '\e916';
+}
+
 .icon-file-text:before
 {
     content: '\e922';
@@ -511,14 +521,19 @@ svg
     content: '\e95f';
 }
 
+.icon-checkbox-checked:before
+{
+    content: '\ea52';
+}
+
+.icon-checkbox-unchecked:before
+{
+    content: '\ea53';
+}
+
 .icon-ungroup:before
 {
     content: '\ea59';
-}
-
-.icon-scissors:before
-{
-    content: '\ea5a';
 }
 
 ::-moz-selection
@@ -765,6 +780,7 @@ p
     display: flex;
 
     margin: 5px;
+    margin-right: 36px;
     padding: 3px 7px;
 
     background-color: rgba(255,255,0,.2);
@@ -788,12 +804,17 @@ p
     background-color: #ff0;
 }
 
-.notes__item__title
+.notes__item__check
 {
-    flex: 1 0 auto;
+    position: absolute;
+    left: 100%;
+
+    display: block;
+
+    padding: 6px 7px;
 }
 
-.notes__item__checklist
+.notes__item__check:before
 {
     font-family: 'icomoon' !important;
     font-weight: normal;
@@ -801,9 +822,33 @@ p
     font-variant: normal;
     line-height: 1;
 
+    content: '';
+    text-transform: none;
+
+    speak: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.notes__item__title
+{
+    flex: 1 0 auto;
+}
+
+.notes__item__status
+{
     display: none;
 
     margin: 0 5px;
+}
+
+.notes__item__status::before
+{
+    font-family: 'icomoon' !important;
+    font-weight: normal;
+    font-style: normal;
+    font-variant: normal;
+    line-height: 1;
 
     text-transform: none;
 
@@ -812,14 +857,14 @@ p
     -moz-osx-font-smoothing: grayscale;
 }
 
-.notes__item__checklist::before
-{
-    content: '';
-}
-
-.notes__item__checklist--isChecklist
+.notes__item__status--checklist
 {
     display: block;
+}
+
+.notes__item__status--checklist::before
+{
+    content: '';
 }
 
 .notes__item__date
@@ -835,6 +880,14 @@ p
 
     align-items: center;
     justify-content: flex-start;
+}
+
+.notes [type='checkbox']:checked + * > .notes__item__check:before
+{
+    font-size: 1rem;
+    line-height: 1rem;
+
+    content: '';
 }
 
 .notes [type='checkbox']:checked + .notes__item:before
