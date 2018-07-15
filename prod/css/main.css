@@ -370,6 +370,7 @@ svg
     src: url('../../fonts/icons/icomoon.eot?v6rjva#iefix') format('embedded-opentype'),url('../../fonts/icons/icomoon.ttf?v6rjva') format('truetype'),url('../../fonts/icons/icomoon.woff?v6rjva') format('woff'),url('../../fonts/icons/icomoon.svg?v6rjva#icomoon') format('svg');
 }
 
+[class='icon'],
 [class^='icon-'],
 [class*=' icon-']
 {
@@ -536,16 +537,31 @@ svg
     content: '\ea59';
 }
 
+.icon-arrow-left2:before
+{
+    content: '\ea38';
+}
+
+.icon-circle-left:before
+{
+    content: '\ea44';
+}
+
+.icon-arrow-left:before
+{
+    content: '\e917';
+}
+
 ::-moz-selection
 {
     color: #fff;
-    background: #f5f5f5;
+    background: #ff0;
 }
 
 ::selection
 {
     color: #fff;
-    background: #f5f5f5;
+    background: #ff0;
 }
 
 h1,
@@ -714,6 +730,91 @@ p
     transform: rotate(-45deg);
 }
 
+.colorPicker
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: block;
+    display: flex;
+
+    width: 100%;
+    width: 80%;
+    height: 100%;
+
+    flex-wrap: wrap;
+}
+
+.colorPicker__color
+{
+    width: 33%;
+}
+
+.modal
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    display: none;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0,0,0,.5);
+}
+
+.modal > *
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+}
+
+.modal__add
+{
+    background-color: #f5f5f5;
+}
+
+.modal__add__header
+{
+    font-size: 1.1rem;
+
+    padding: 18px 13px;
+
+    color: dodgerblue;
+    border-bottom: 1px solid dodgerblue;
+}
+
+.modal__add__input
+{
+    padding: 13px 13px;
+}
+
+.modal__add__input > *
+{
+    padding: 5px;
+
+    background-color: #fff;
+}
+
+.modal__add__bttnGroup
+{
+    display: flex;
+
+    border-top: 1px solid #ccc;
+
+    align-items: center;
+}
+
+.modal__add__bttnGroup > *
+{
+    flex: 1 0 auto;
+}
+
 .header
 {
     position: fixed;
@@ -779,6 +880,7 @@ p
 
     display: flex;
 
+    height: 36px;
     margin: 5px;
     margin-right: 36px;
     padding: 3px 7px;
@@ -907,134 +1009,236 @@ p
     background-color: rgba(0,0,0,.2);
 }
 
+.note__header
+{
+    padding: 5px;
+
+    background-color: yellow;
+}
+
+.note__header__title
+{
+    width: 200px;
+    padding-right: 10px;
+}
+
+.note__header__title input
+{
+    display: block;
+
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+
+    border: 1px solid transparent;
+    background-color: transparent;
+}
+
+.note__header__title input:focus,
+.note__header__title input:active
+{
+    border: 1px solid #000;
+    background-color: #fff;
+}
+
+.note__header__edit
+{
+    width: 30px;
+    height: 30px;
+}
+
+.note__date
+{
+    font-size: .7rem;
+
+    display: flex;
+
+    padding: 2px 5px;
+
+    color: #a2a2a2;
+    background-color: rgba(255,255,0,.2);
+
+    align-items: center;
+    justify-content: space-between;
+}
+
+.note__date__days
+{
+    text-align: left;
+}
+
+.note__date__added
+{
+    text-align: right;
+}
+
+.note__content
+{
+    position: relative;
+
+    padding: 5px 0;
+
+    background-color: rgba(255,255,0,.2);
+}
+
+.note__content textarea
+{
+    line-height: 1.4rem;
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+    padding: 0 5px;
+    padding-top: 2px;
+
+    resize: none;
+
+    background: linear-gradient(to top, yellow 1px, transparent 1px);
+    background-size: 100% 1.4rem;
+}
+
+.note__content__list > li
+{
+    position: relative;
+
+    display: flex;
+    overflow: hidden;
+
+    padding-left: 5px;
+
+    border-bottom: 1px solid #ff0;
+
+    align-items: center;
+}
+
+.note__content__list > li [type='checkbox']:checked + label
+{
+    text-decoration: line-through;
+
+    color: #ccc;
+}
+
+.note__content__list > li [type='checkbox']:checked + label::before
+{
+    display: block;
+}
+
+.note__content__list > li [type='checkbox']:checked + label + *
+{
+    display: none;
+}
+
+.note__content__list > li > label
+{
+    position: relative;
+
+    display: block;
+
+    width: 100%;
+    padding: 13px 36px 13px 0;
+
+    cursor: pointer;
+
+    flex: 1 0 auto;
+}
+
+.note__content__list > li > label:before
+{
+    font-family: 'icomoon' !important;
+    font-weight: normal;
+    font-style: normal;
+    font-variant: normal;
+    line-height: 1;
+
+    position: absolute;
+    top: 50%;
+    right: 0;
+
+    display: none;
+
+    width: 36px;
+
+    content: '';
+    transform: translate(0, -50%);
+    text-align: center;
+    text-transform: none;
+
+    speak: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.note__content__options
+{
+    position: absolute;
+    right: 0;
+
+    width: 36px;
+    height: 42px;
+}
+
+.note__content__options:before
+{
+    font-family: 'icomoon' !important;
+    font-size: 12px;
+    font-weight: normal;
+    font-style: normal;
+    font-variant: normal;
+    line-height: 1;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    content: '';
+    transform: translate(-50%, -50%);
+    text-transform: none;
+
+    speak: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
 .btn
 {
-    font-family: 'open sans';
-    font-size: 1.125rem;
     font-weight: 400;
 
     position: relative;
     z-index: 1;
 
-    width: 229px;
-    height: 50px;
+    display: inline-block;
+
+    padding: 7px;
 
     transition: all .3s;
     vertical-align: middle;
-    text-transform: uppercase;
 
-    color: #fff;
-    background-color: #000;
-}
-
-.btn:hover
-{
     color: #000;
-    border: 2px solid #000;
-    background-color: transparent;
+    border-right: 1px solid #ccc;
 }
 
-.btnTooltip
+.btn:last-child
 {
-    font-family: 'clinica';
-
-    position: absolute;
-    z-index: 0;
-
-    padding: 0 25px;
-
-    transition: all .3s;
-    text-align: center;
-
-    color: #fff;
-    border-radius: 5px;
-    background-color: #00bd00;
-    box-shadow: 7px 7px 20px rgba(156,55,55,.25);
+    border-right: none;
 }
 
-.btnTooltip:before
+.btn--back:before
 {
-    position: absolute;
-    top: 100%;
-    left: 50%;
+    font-family: 'icomoon' !important;
+    font-weight: normal;
+    font-style: normal;
+    font-variant: normal;
+    line-height: 1;
 
-    display: block;
+    margin-right: 10px;
 
-    width: 0;
-    height: 0;
+    content: '';
+    text-transform: none;
 
-    content: '';
-    transform: translate(-50%, 0);
-
-    border: 25px solid transparent;
-    border-top: 15px solid #00bd00;
-}
-
-.btnTooltip--gratis
-{
-    font-weight: 700;
-
-    bottom: 130%;
-    left: 50%;
-
-    width: 145px;
-
-    transform: translate(-50%, 0);
-}
-
-.btnTooltip--gratis > span
-{
-    display: block;
-
-    padding: 5px 10px;
-}
-
-.btnTooltip--gratis > span:first-of-type
-{
-    font-size: 2.75rem;
-
-    padding-bottom: 0;
-}
-
-.btnTooltip--gratis > span:last-of-type
-{
-    font-size: 1rem;
-
-    margin-bottom: 15px;
-    padding-top: 0;
-
-    border-bottom: 1px solid #fff;
-}
-
-@media (max-width: 980px)
-{
-    .btnTooltip--gratis
-    {
-        left: 69%;
-    }
-}
-
-@media (max-width: 890px)
-{
-    .btnTooltip
-    {
-        padding: 0 10px;
-    }
-
-    .btnTooltip--gratis
-    {
-        width: 105px;
-    }
-
-    .btnTooltip--gratis > span:first-of-type
-    {
-        font-size: 1.375rem;
-    }
-
-    .btnTooltip--gratis > span:last-of-type
-    {
-        font-size: 11px;
-    }
+    speak: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 @media (max-width: 767px)
@@ -1042,21 +1246,5 @@ p
     .burger
     {
         display: block;
-    }
-}
-
-@media (max-width: 550px)
-{
-    .btnTooltip
-    {
-        display: none;
-    }
-}
-
-@media (max-width: 350px)
-{
-    .btn
-    {
-        width: 200px;
     }
 }

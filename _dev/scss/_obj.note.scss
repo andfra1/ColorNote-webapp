@@ -1,0 +1,111 @@
+.note {
+  &__header {
+    background-color: yellow;
+    padding: 5px;
+    &__title {
+      width: 200px;
+      padding-right: 10px;
+      input {
+        width: 100%;
+        height: 100%;
+        padding: 5px;
+        background-color: transparent;
+        border: 1px solid transparent;
+        display: block;
+        &:focus,
+        &:active {
+          background-color: $c-light;
+          border: 1px solid $c-dark;
+        }
+      }
+    }
+    &__edit {
+      width: 30px;
+      height: 30px;
+      &--icon {}
+      &--color {}
+    }
+  }
+  &__date {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2px 5px;
+    font-size: 0.7rem;
+    color: #a2a2a2;
+    background-color: rgba($c-basic, 0.2);
+    &__days {
+      text-align: left
+    }
+    &__added {
+      text-align: right
+    }
+  }
+  &__content {
+    position: relative;
+    padding: 5px 0;
+    background-color: rgba($c-basic, 0.2);
+    textarea {
+      padding: 0 5px;
+      display: block;
+      width: 100%;
+      height: 100%;
+      line-height: 1.4rem;
+      background: linear-gradient(to top, yellow 1px, transparent 1px);
+      background-size: 100% 1.4rem;
+      padding-top: 2px;
+      resize: none;
+    }
+    &__list {
+      >li {
+        position: relative;
+        border-bottom: 1px solid $c-basic;
+        display: flex;
+        align-items: center;
+        padding-left: 5px;
+        overflow: hidden;
+        [type="checkbox"]:checked+label {
+          color: #ccc;
+          text-decoration: line-through;
+          &::before {
+            display: block;
+          }
+        }
+        [type="checkbox"]:checked+label+* {
+          display: none;
+        }
+        &>label {
+          cursor: pointer;
+          position: relative;
+          display: block;
+          padding: 13px 36px 13px 0;
+          flex: 1 0 auto;
+          width: 100%;
+          &:before {
+            display: none;
+            @include iconize;
+            content: $icon-check;
+            position: absolute;
+            right: 0;
+            width: 36px;
+            text-align: center;
+            @include centerY;
+          }
+        }
+      }
+    }
+    &__options {
+      position: absolute;
+      width: 36px;
+      height: 42px;
+      right: 0;
+      &:before {
+        @include iconize;
+        content: $icon-ellipsis-v;
+        position: absolute;
+        @include center;
+        font-size: 12px;
+      }
+    }
+  }
+}

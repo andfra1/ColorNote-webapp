@@ -1,34 +1,22 @@
-<nav class="menu menu-options">
-      <ul>
-        <li>
-          <a href="#">
-            Color
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            Sort
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            View
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            Search
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            Sync
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            Settings
-          </a>
-        </li>
-      </ul>
-    </nav>
+<?php
+$menuOptions = [
+'Color',
+'Sort',
+'View',
+'Search',
+'Sync',
+'Settings'
+]
+?>
+
+  <nav class="menu menu-options">
+    <ul>
+      <?php foreach($menuOptions as $key) : ?>
+      <li>
+        <a href="#">
+          <?= $key; ?>
+        </a>
+      </li>
+      <?php endforeach; ?>
+    </ul>
+  </nav>
