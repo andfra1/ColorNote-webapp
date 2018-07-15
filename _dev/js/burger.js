@@ -14,3 +14,21 @@
 //     this.value = "on";
 //   }
 // }
+
+$('.burger-options').on('click', function (e) {
+  if ($(this).val() === 'off') {
+    $(this).addClass('burger-options--on');
+    $(this).val('on');
+  }
+  else if ($(this).val() === 'on') {
+    $(this).removeClass('burger-options--on');
+    $(this).val('off');
+  }
+  e.stopPropagation();
+});
+
+$('body').on('click', function (e) {
+  $('.burger-options').removeClass('burger-options--on');
+  $('.burger-options').val('off');
+e.stopPropagation();
+});

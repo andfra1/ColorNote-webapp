@@ -11,9 +11,9 @@ $list = ['Some list item', 'Another item', 'Xadfsd'];
         <input type="text">
       </div>
       <div class="modal__add__bttnGroup">
-        <button class="btn" type="button" value="Cancel">Cancel</button>
-        <button class="btn" type="button" value="Next">Next</button>
-        <button class="btn" type="button" value="OK">OK</button>
+        <button class="btn btn--modal" type="button" value="Cancel">Cancel</button>
+        <button class="btn btn--modal" type="button" value="Next">Next</button>
+        <button class="btn btn--modal" type="button" value="OK">OK</button>
       </div>
     </div>
   </div>
@@ -25,7 +25,7 @@ $list = ['Some list item', 'Another item', 'Xadfsd'];
         <label for="item-0<?= $key; ?>">
           <?= $item; ?>
         </label>
-        <button class="note__content__options"></button>
+        <button class="btn btn--square note__content__options"></button>
       </li>
       <?php endforeach; 
       ?>

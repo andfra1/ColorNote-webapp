@@ -1,20 +1,21 @@
 <?php
 $menuOptions = [
-'Color',
-'Sort',
-'View',
-'Search',
-'Sync',
-'Settings'
+'color',
+'sort',
+'view',
+'search',
+'sync',
+'settings'
 ]
 ?>
 
+<button class="btn burger-options" value="off"></button>
   <nav class="menu menu-options">
     <ul>
       <?php foreach($menuOptions as $key) : ?>
       <li>
         <a href="#">
-          <?= $key; ?>
+          <span class="icon-<?= $key; ?> icon--space-right"></span><?= $key; ?>
         </a>
       </li>
       <?php endforeach; ?>

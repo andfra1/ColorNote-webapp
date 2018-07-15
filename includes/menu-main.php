@@ -4,6 +4,7 @@ $name = 'David Haselhoff';
 $menuMain = ['Notes','Calendar','Archive','Trash Can','Search','Theme','Settings']
 ?>
 
+<button class="btn burger"></button>
 <nav class="menu menu-main">
       <div class="menu-main__profile">
         <div class="menu-main__profile__avatar">

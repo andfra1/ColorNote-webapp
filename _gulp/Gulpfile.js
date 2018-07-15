@@ -28,7 +28,7 @@ var path = {
     },
     js: {
         dev: [
-            //'../_dev/js/vendor/*.js',
+            '../_dev/js/vendor/*.js',
             '../_dev/js/*.js'
         ],
         prod: '../prod/js/'

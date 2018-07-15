@@ -11,12 +11,12 @@
     @include center;
   }
   &__add {
-    background-color: #f5f5f5;
+    background-color: $c-light-gray;
     &__header {
       font-size: 1.1rem;
-      color: dodgerblue;
+      color: $c-info;
       padding: 18px 13px;
-      border-bottom: 1px solid dodgerblue;
+      border-bottom: 1px solid $c-info;
     }
     &__input {
       padding: 13px 13px;
@@ -26,7 +26,7 @@
       }
     }
     &__bttnGroup {
-      border-top: 1px solid #ccc;
+      border-top: 1px solid $c-light-gray2;
       display: flex;
       align-items: center;
       >* {

@@ -5,7 +5,7 @@
   <a href="?view=note-text" class="notes__item">
     <div class="notes__item__title">Item</div>
     <div class="notes__item__checklist"></div>
-    <div class="notes__item__date">13 sty</div>
+    <div class="notes__item__date">13 Jan</div>
     <label class="notes__item__check" for="note-<?= $n; ?>">
     </label>
   </a>
@@ -14,7 +14,7 @@
   <a href="?view=note-checklist" class="notes__item">
     <div class="notes__item__title">Item</div>
     <div class="notes__item__status notes__item__status--checklist"></div>
-    <div class="notes__item__date">13 sty</div>
+    <div class="notes__item__date">13 Jan</div>
 
     <label class="notes__item__check" for="note-0<?= $n; ?>">
     </label>

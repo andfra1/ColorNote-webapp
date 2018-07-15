@@ -20,4 +20,26 @@
       }
     }
   }
+  &-options {
+    position: absolute;
+    z-index: 5;
+    top: 5px;
+    right: 5px;
+    background-color: $c-light-gray;
+    box-shadow: -2px 2px 2px $c-light-gray2;
+    &>ul {
+      &>li {
+        border-bottom: 1px solid $c-light-gray2;
+        &>* {
+          padding: 10px;
+          &:first-letter {
+            text-transform: uppercase;
+          }
+          &:hover {
+            background-color: $c-orange;
+          }
+        }
+      }
+    }
+  }
 }

@@ -1,6 +1,6 @@
 <footer class="footer">
   <div class="container">
-    <a href="./" class="btn btn--back">Back</a>
+    <a href="./" class="btn btn--modal"><span class="icon-back icon--space-right"></span>Back</a>
   </div>
 </footer>
 

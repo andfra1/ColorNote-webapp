@@ -203,7 +203,7 @@ button:-moz-focusring,
 a,
 button,
 optgroup,
-select {
+select, label {
   position: relative;
   cursor: pointer;
 }
