@@ -8,7 +8,7 @@ else {
 ?>
 
   <section>
-    <div class="container">
+    <div class="wrapper" id="main-window">
       <?php 
     switch (isset($_GET['view']) ? $_GET['view'] : '') {
       case 'note-text' :

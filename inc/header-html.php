@@ -2,7 +2,7 @@
 include_once ('inc/header.php');
 ?>
   <header class="header">
-    <div class="container">
+    <div class="wrapper">
       <div>
         <div>
           <?php include ('includes/menu-main.php'); ?>
@@ -11,7 +11,7 @@ include_once ('inc/header.php');
           </div>
         </div>
         <div>
-          <button class="btn add-note" value="off">
+          <button class="btn add-note" id="jsAddNote" value="off">
           </button>
           <?php include ('includes/menu-options.php'); ?>
         </div>

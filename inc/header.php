@@ -10,7 +10,7 @@
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 shrink-to-fit=no">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-		<!--[if IE]>
+	<!--[if IE]>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 		<script type="text/javascript" src="js/html5.js"></script>
 		<![endif]-->
@@ -32,7 +32,41 @@
 
 	<link rel="stylesheet" href="<?= HTTP ?>prod/css/main<?= $dev?'':$prod; ?>.css">
 
-	<title><?= $pageTitle; ?></title>
+	<title>
+		<?= $pageTitle; ?>
+	</title>
 
 </head>
+
 <body>
+	<div class="container">
+	<div class="modal">
+
+		<div class="modal__box">
+			<div class="modal__box__header">
+				Add Note
+			</div>
+			<div class="modal__box__type">
+
+			</div>
+			<div class="modal__box__bttnGroup">
+				<button class="btn btn--modal" type="button" value="Cancel">Cancel</button>
+				<button class="btn btn--modal" type="button" value="Next">Next</button>
+				<button class="btn btn--modal" type="button" value="OK">OK</button>
+			</div>
+		</div>
+
+		<div class="modal__addItem">
+			<div class="modal__addItem__header">
+				Add Item
+			</div>
+			<div class="modal__addItem__input">
+				<input type="text">
+			</div>
+			<div class="modal__addItem__bttnGroup">
+				<button class="btn btn--modal" type="button" value="Cancel">Cancel</button>
+				<button class="btn btn--modal" type="button" value="Next">Next</button>
+				<button class="btn btn--modal" type="button" value="OK">OK</button>
+			</div>
+		</div>
+	</div>

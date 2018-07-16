@@ -1,17 +1,8 @@
 .burger {
-  position: relative;
-  width: 30px;
-  height: 30px;
-  &:before {
-    @include iconize;
-    content: $icon-bars;
-    position: absolute;
-    @include center;
-  }
   &-options {
     position: relative;
     width: 30px;
-      height: 30px;
+    height: 30px;
     &:before {
       @include iconize;
       content: $icon-ellipsis-v;

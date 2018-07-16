@@ -9,7 +9,7 @@ $menuOptions = [
 ]
 ?>
 
-<button class="btn burger-options" value="off"></button>
+<button class="btn burger-options" id="jsBurgerOptions"value="off"></button>
   <nav class="menu menu-options">
     <ul>
       <?php foreach($menuOptions as $key) : ?>

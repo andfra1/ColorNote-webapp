@@ -1,3 +1,7 @@
+body {
+  background-color: $c-light-gray;
+}
+
 ::selection {
   color: $c-light;
   background: $c-basic;
@@ -54,6 +58,12 @@ p {
   font-weight: $fw-basic;
   font-size: $fs-basic;
   color: $fc-basic;
+  overflow: hidden;
+}
+
+.wrapper {
+  max-width: $wrapper-width;
+  margin: $wrapper-margin;
 }
 
 [type="checkbox"] {

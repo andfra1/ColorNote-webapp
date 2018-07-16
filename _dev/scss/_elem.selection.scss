@@ -3,6 +3,9 @@
   justify-content: space-between;
   align-items: center;
   background-color: $c-light-gray2;
+  transform: translateY(-100%);
+  z-index: -1;
+  transition: transform 0.3s;
   &__item {
     display: flex;
     justify-content: center;
@@ -13,5 +16,8 @@
     &>* {
       @include iconSpace(5px, 5px);
     }
+  }
+  &--show {
+    transform: translateY(0%);
   }
 }

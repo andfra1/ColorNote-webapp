@@ -49,7 +49,7 @@
 }
 
 $icon-bars:"\e900";
-$icon-calendar-alt:"\e901";
+$icon-calendar:"\e901";
 $icon-caret-down:"\e902";
 $icon-check:"\e903";
 $icon-check-square:"\e904";
@@ -61,7 +61,7 @@ $icon-cut:"\e909";
 $icon-ellipsis-v:"\e90a";
 $icon-inbox:"\e90b";
 $icon-lock:"\e90c";
-$icon-paint-brush:"\e90d";
+$icon-theme:"\e90d";
 $icon-palette:"\e90e";
 $icon-paper-plane:"\e90f";
 $icon-pencil-alt:"\e910";
@@ -87,7 +87,7 @@ $icon-arrow-left:"\e917";
 .icon-view:before {
   content: "\e900";
 }
-.icon-calendar-alt:before {
+.icon-calendar:before {
   content: "\e901";
 }
 .icon-caret-down:before {
@@ -99,7 +99,7 @@ $icon-arrow-left:"\e917";
 .icon-check-square:before {
   content: "\e904";
 }
-.icon-clipboard-list:before {
+.icon-notes:before {
   content: "\e905";
 }
 .icon-clock:before {
@@ -123,7 +123,7 @@ $icon-arrow-left:"\e917";
 .icon-lock:before {
   content: "\e90c";
 }
-.icon-paint-brush:before {
+.icon-theme:before {
   content: "\e90d";
 }
 .icon-color:before {
@@ -132,7 +132,7 @@ $icon-arrow-left:"\e917";
 .icon-paper-plane:before {
   content: "\e90f";
 }
-.icon-pencil-alt:before {
+.icon-pencil:before {
   content: "\e910";
 }
 .icon-plus-circle:before {
@@ -143,6 +143,9 @@ $icon-arrow-left:"\e917";
 }
 .icon-sync:before {
   content: "\e913";
+}
+.icon-trash:before {
+  content: "\e914";
 }
 .icon-delete:before {
   content: "\e914";

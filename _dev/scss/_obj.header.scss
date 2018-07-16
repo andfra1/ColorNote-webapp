@@ -1,8 +1,11 @@
-$headerHeight: 85px;
+$headerHeight: 78px;
 .header {
   @include fixed;
   height: $headerHeight;
   z-index: 2;
+  &>.wrapper {
+    padding: $wrapper-padding;
+  }
   &-spacer {
     position: relative;
     height: $headerHeight;
@@ -24,6 +27,9 @@ $headerHeight: 85px;
 
 .logo {
   padding: 10px;
+  &>img {
+    width: 130px;
+  }
 }
 
 .add-note {
