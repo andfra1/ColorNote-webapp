@@ -40,9 +40,26 @@
 
 <body>
 	<div class="container">
-	<div class="modal">
+	<div class="modal" id="modal">
 
-		<div class="modal__box">
+<div class="modal__box modal__box--color">
+			<div class="modal__box__header">
+				Select color
+			</div>
+			<div class="modal__box__type">
+				<div style="background-color:#ff0">#ff0</div>
+				<div style="background-color:#f0f">#f0f</div>
+				<div style="background-color:#0ff">#0ff</div>
+				<div style="background-color:#f00">#f00</div>
+				<div style="background-color:#00f">#00f</div>
+				<div style="background-color:#0f0">#0f0</div>
+			</div>
+			<div class="modal__box__bttnGroup">
+				<button class="btn btn--modal" type="button" value="Cancel">Cancel</button>
+			</div>
+		</div>
+
+		<!-- <div class="modal__box">
 			<div class="modal__box__header">
 				Add Note
 			</div>
@@ -68,5 +85,5 @@
 				<button class="btn btn--modal" type="button" value="Next">Next</button>
 				<button class="btn btn--modal" type="button" value="OK">OK</button>
 			</div>
-		</div>
+		</div> -->
 	</div>

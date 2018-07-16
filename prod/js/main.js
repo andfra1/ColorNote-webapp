@@ -6,6 +6,7 @@ $('body').on('click', function (e) {
   $('#jsBurger').val('off');
   $('#jsBurgerOptions').removeClass('burger-options--on');
   $('#jsBurgerOptions').val('off');
+  e.stopPropagation();
 });
 $('#jsBurgerOptions').on('click', function (e) {
   if ($(this).val() === 'off') {
@@ -27,6 +28,14 @@ $('#jsBurger').on('click', function (e) {
   }
   e.stopPropagation();
 });
+$('#jsColor').on('click', (e) => {
+  $('#modal').addClass('modal--on');
+})
+
+$('.modal__box__type > div').on('click', (e) => {
+  console.log($(this));
+  e.preventDefault();
+})
 if ($('#jsonHere')) {
   $.getJSON("./json/notes.json", function (data) {
     var items = [];
@@ -48,4 +57,8 @@ $(document).ready(() => {
       $('#jsSelection').removeClass('selection--show');
     }
   });
+});
+$('#modal').on('click', (e)=>{
+  $('#modal').removeClass('modal--on');
+  e.stopPropagation();
 });

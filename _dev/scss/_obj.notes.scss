@@ -5,7 +5,7 @@
   z-index: 1;
   &__item {
     position: relative;
-    background-color: $c-basic2;
+    background-color: $c-basic;
     display: flex;
     padding: 0 7px;
     margin: 5px;
@@ -17,10 +17,10 @@
       display: block;
       position: absolute;
       top: 0;
-      left: 0;
-      width: 3px;
+      right: 0;
+      width: calc(100% - 3px);
       height: 100%;
-      background-color: $c-basic;
+      background-color: rgba($c-light,0.8);
     }
     &__link {
       display: flex;

@@ -3,4 +3,5 @@ $('body').on('click', function (e) {
   $('#jsBurger').val('off');
   $('#jsBurgerOptions').removeClass('burger-options--on');
   $('#jsBurgerOptions').val('off');
+  e.stopPropagation();
 });
