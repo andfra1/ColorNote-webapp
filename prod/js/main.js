@@ -28,14 +28,9 @@ $('#jsBurger').on('click', function (e) {
   }
   e.stopPropagation();
 });
-$('#jsColor').on('click', (e) => {
+$('#jsColor').on('click', () => {
   $('#modal').addClass('modal--on');
-})
-
-$('.modal__box__type > div').on('click', (e) => {
-  console.log($(this));
-  e.preventDefault();
-})
+});
 if ($('#jsonHere')) {
   $.getJSON("./json/notes.json", function (data) {
     var items = [];

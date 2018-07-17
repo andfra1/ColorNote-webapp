@@ -1,8 +1,3 @@
-$('#jsColor').on('click', (e) => {
+$('#jsColor').on('click', () => {
   $('#modal').addClass('modal--on');
-})
-
-$('.modal__box__type > div').on('click', (e) => {
-  console.log($(this));
-  e.preventDefault();
-})
+});
