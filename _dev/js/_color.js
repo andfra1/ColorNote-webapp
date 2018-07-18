@@ -19,7 +19,7 @@ function setColor() {
         .removeClass(function (index, css) {
           return (css.match(/\bnotes__item--\S+/g) || []).join(' ');
         })
-        .addClass('notes__item--' + $(this).attr('data-color'));
+        .addClass('notes__item--' + $(this).attr('data-pickColor'));
     }
   }
 }

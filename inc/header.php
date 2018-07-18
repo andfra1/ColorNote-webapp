@@ -47,12 +47,12 @@
 					Select color
 				</div>
 				<div class="modal__box__type" id="color">
-					<div style="background-color:red" data-color="red"></div>
-					<div style="background-color:blue" data-color="blue"></div>
-					<div style="background-color:green" data-color="green"></div>
-					<div style="background-color:cyan" data-color="cyan"></div>
-					<div style="background-color:magenta" data-color="magenta"></div>
-					<div style="background-color:yellow" data-color="yellow"></div>
+					<div style="background-color:red" data-pickColor="red"></div>
+					<div style="background-color:blue" data-pickColor="blue"></div>
+					<div style="background-color:green" data-pickColor="green"></div>
+					<div style="background-color:cyan" data-pickColor="cyan"></div>
+					<div style="background-color:magenta" data-pickColor="magenta"></div>
+					<div style="background-color:yellow" data-pickColor="yellow"></div>
 				</div>
 				<div class="modal__box__bttnGroup">
 					<button class="btn btn--modal" type="button" value="Cancel">Cancel</button>
