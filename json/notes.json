@@ -1,5 +1,38 @@
 {
-  "01": "First note First note First note First noteFirst note First note First note First note First note First note First note First note First note",
-  "02": "Second note",
-  "03": "Last note"
+  "01": {
+    "title": "First note First note First note First noteFirst note First note First note First note First note First note First note First note First note",
+    "content": "Note text Note text Note text Note text Note text Note text Note text Note text Note text ",
+    "created": "01 Sep 2018",
+    "color": "red",
+    "status": "checklist",
+    "reminder": "2018-07-31 16:00",
+    "locked": "on"
+  },
+  "02": {
+    "title": "Second note",
+    "content": "Note text Note text Note text Note text Note text Note text Note text Note text Note text ",
+    "created": "01 Sep 2018",
+    "color": "yellow",
+    "status": "note",
+    "reminder": "2018-07-11 3:33",
+    "locked": "on"
+  },
+  "03": {
+    "title": "Third note",
+    "content": "Note text Note text Note text Note text Note text Note text Note text Note text Note text ",
+    "created": "01 Sep 2018",
+    "color": "blue",
+    "status": "checklist",
+    "reminder": "",
+    "locked": "on"
+  },
+  "04": {
+    "title": "Last note",
+    "content": "Note text Note text Note text Note text Note text Note text Note text Note text Note text ",
+    "created": "01 Sep 2018",
+    "color": "blue",
+    "status": "checklist",
+    "reminder": "",
+    "locked": ""
+  }
 }

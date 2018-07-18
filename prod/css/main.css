@@ -662,8 +662,6 @@ p
 
     position: relative;
 
-    overflow: hidden;
-
     max-width: 500px;
     margin: 0 auto;
     padding: 0 30px;
@@ -1109,6 +1107,36 @@ p
     content: '';
 
     background-color: rgba(255,255,255,.8);
+}
+
+.notes__item--red
+{
+    background-color: red;
+}
+
+.notes__item--yellow
+{
+    background-color: yellow;
+}
+
+.notes__item--blue
+{
+    background-color: blue;
+}
+
+.notes__item--magenta
+{
+    background-color: magenta;
+}
+
+.notes__item--cyan
+{
+    background-color: cyan;
+}
+
+.notes__item--green
+{
+    background-color: green;
 }
 
 .notes__item__link

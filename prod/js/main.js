@@ -28,14 +28,34 @@ $('#jsBurger').on('click', function (e) {
   }
   e.stopPropagation();
 });
-$('#jsColor').on('click', () => {
+$('#jsColor').on('click', function () {
   $('#modal').addClass('modal--on');
 });
+
+var c = document.getElementById('color');
+var tag = c.getElementsByTagName('div');
+var note = document.getElementsByClassName('notes__item');
+
+for (var i = 0; i < tag.length; i++) {
+  tag[i].addEventListener('click', setColor, false);
+}
+
+function setColor() {
+  for (var n = 0; n < note.length; n++) {
+    if (note[n].firstChild.checked) {
+      $(note[n], '[class*= notes__item--]').removeClass(function (index, css) {
+        return (css.match(/\bnotes__item--\S+/g) || []).join(' ');
+      });
+      $(note[n]).addClass('notes__item--' + $(this).attr('data-color'));
+    }
+  }
+}
 if ($('#jsonHere')) {
   $.getJSON("./json/notes.json", function (data) {
     var items = [];
     $.each(data, function (key, val) {
-      items.push('<li class="notes__item"><input type="checkbox" name="note-' + key + '" id="note-' + key + '" class="notes__checkbox"><a href="?view=note-text" class="notes__item__link"><div class="notes__item__title">' + val + '</div><div class="notes__item__checklist"></div><div class="notes__item__date">13 Jan</div></a><label class="notes__item__check" for="note-' + key + '"></label></li>');
+      items.push(
+        '<li class="notes__item notes__item--' + val.color + '"><input type="checkbox" name="note-' + key + '" id="note-' + key + '" class="notes__checkbox"><a href="?view=note-text" class="notes__item__link"><div class="notes__item__title">' + val.title + '</div><div class="notes__item__reminder" data-reminder="' + val.reminder + '"></div><div class="notes__item__status" data-status="' + val.status + '"></div><div class="notes__item__date">' + val.created + '</div></a><label class="notes__item__check" for="note-' + key + '"></label></li>');
     });
 
     $("<ul/>", {
@@ -53,7 +73,14 @@ $(document).ready(() => {
     }
   });
 });
-$('#modal').on('click', (e)=>{
+function modalOn(){
+  $('#modal').addClass('modal--on');
+};
+
+function modalOff(){
   $('#modal').removeClass('modal--on');
-  e.stopPropagation();
+};
+
+$('#modal').on('click', ()=>{
+  modalOff();
 });

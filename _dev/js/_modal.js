@@ -1,4 +1,11 @@
-$('#modal').on('click', (e)=>{
+function modalOn(){
+  $('#modal').addClass('modal--on');
+};
+
+function modalOff(){
   $('#modal').removeClass('modal--on');
-  e.stopPropagation();
+};
+
+$('#modal').on('click', ()=>{
+  modalOff();
 });
