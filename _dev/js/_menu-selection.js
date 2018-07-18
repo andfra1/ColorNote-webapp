@@ -1,3 +1,5 @@
+/*jshint esversion: 6 */
+
 $(document).ready(() => {
   $('.notes__checkbox').on('click', () => {
     if ($('.notes__checkbox').is(':checked')) {

@@ -28,7 +28,9 @@ $('#jsBurger').on('click', function (e) {
   }
   e.stopPropagation();
 });
-$('#jsColor').on('click', function () {
+/*jshint esversion: 6 */
+
+$('#jsColor').on('click', () => {
   $('#modal').addClass('modal--on');
 });
 
@@ -43,10 +45,11 @@ for (var i = 0; i < tag.length; i++) {
 function setColor() {
   for (var n = 0; n < note.length; n++) {
     if (note[n].firstChild.checked) {
-      $(note[n], '[class*= notes__item--]').removeClass(function (index, css) {
-        return (css.match(/\bnotes__item--\S+/g) || []).join(' ');
-      });
-      $(note[n]).addClass('notes__item--' + $(this).attr('data-color'));
+      $(note[n], '[class*= notes__item--]')
+        .removeClass(function (index, css) {
+          return (css.match(/\bnotes__item--\S+/g) || []).join(' ');
+        })
+        .addClass('notes__item--' + $(this).attr('data-color'));
     }
   }
 }
@@ -58,9 +61,12 @@ var note = document.getElementsByClassName('notes__item');
 del.addEventListener('click', deleteNote, false);
 
 function deleteNote() {
-  for (var n = 0; n < note.length; n++) {
-    if (note[n].firstChild.checked) {
-      note[n].style.display = "none";
+  var confirmation = confirm('Are you sure?');
+  if (confirmation) {
+    for (var n = 0; n < note.length; n++) {
+      if (note[n].firstChild.checked) {
+        note[n].style.display = "none";
+      }
     }
   }
 }
@@ -78,6 +84,8 @@ if ($('#jsonHere')) {
     }).prependTo("#jsonHere");
   });
 }
+/*jshint esversion: 6 */
+
 $(document).ready(() => {
   $('.notes__checkbox').on('click', () => {
     if ($('.notes__checkbox').is(':checked')) {
@@ -87,13 +95,15 @@ $(document).ready(() => {
     }
   });
 });
+/*jshint esversion: 6 */
+
 function modalOn(){
   $('#modal').addClass('modal--on');
-};
+}
 
 function modalOff(){
   $('#modal').removeClass('modal--on');
-};
+}
 
 $('#modal').on('click', ()=>{
   modalOff();

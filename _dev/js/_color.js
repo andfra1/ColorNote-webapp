@@ -1,4 +1,6 @@
-$('#jsColor').on('click', function () {
+/*jshint esversion: 6 */
+
+$('#jsColor').on('click', () => {
   $('#modal').addClass('modal--on');
 });
 
@@ -13,10 +15,11 @@ for (var i = 0; i < tag.length; i++) {
 function setColor() {
   for (var n = 0; n < note.length; n++) {
     if (note[n].firstChild.checked) {
-      $(note[n], '[class*= notes__item--]').removeClass(function (index, css) {
-        return (css.match(/\bnotes__item--\S+/g) || []).join(' ');
-      });
-      $(note[n]).addClass('notes__item--' + $(this).attr('data-color'));
+      $(note[n], '[class*= notes__item--]')
+        .removeClass(function (index, css) {
+          return (css.match(/\bnotes__item--\S+/g) || []).join(' ');
+        })
+        .addClass('notes__item--' + $(this).attr('data-color'));
     }
   }
 }
